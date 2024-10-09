@@ -14,7 +14,7 @@ permissions:
   contents: read    # This is required for actions/checkout
 
 env:
-  TERRAFORM_VERSION: '1.9.5'
+  TERRAFORM_VERSION: '1.9.6'
   AWS_GHA_ROLE: 'arn:aws:iam::035511759406:role/GithubActionsRole'
   AWS_REGION: 'us-east-1'
 
