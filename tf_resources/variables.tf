@@ -26,3 +26,7 @@ variable "global_cidr_block" {
 variable "personal_ip" {
   default = "46.53.252.80/32"
 }
+
+variable "bucket_name_kops" {
+  default = "rss-aws-kops"
+}
