@@ -29,3 +29,17 @@ Instances from private subnets are not publicly accessible. They use NAT Gateway
 You can review all the screenshots and details into PR to Task 2: https://github.com/shall-it/rsschool-devops-course-tasks/pull/2
 
 **Important note!** Strongly recommended - destroy all instances in both public and private subnets, bastion host and NAT Gateway especially when you don't need them to save your money since these resources are most expensive!
+
+## Task 3
+https://github.com/rolling-scopes-school/tasks/blob/master/devops/modules/2_cluster-configuration/task_3.md
+
+During this task we implemented:
+1. Created the instance for kOps management and the bastion host for access to it
+2. Deployed automatically kOps cluster (master + node) with all related infrastrusture
+3. Organized and verified access from local computer to the deployed kOps cluster (content of the kubeconfig file was copied from instance for kOps managing to ~/.kube/config file on local computer)
+4. Deployed and checked the simple workload inside the running kOps cluster
+
+Please use `terraform init/plan/apply` commands from `tf_resources` directory to deploy all of these resources. Or just push your changes into `task_3` branch or create PR to `master`.
+
+**Important note!** Strongly recommended - destroy cluster and all related infrastrusture, instance for kOps managing and bastion host when you don't need them to save your money!
+Example of command to delete kOps cluster and all related infrastructure from instance for kOps managing: `kops delete cluster --name=kops.k8s.local --state=s3://rss-aws-kops --yes`
